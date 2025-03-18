@@ -31,9 +31,11 @@ $hasil= mysqli_query($conn, $query);
         </tr>
     </thead>
     <tbody>
-        <?php while ($data = mysqli_fetch_array($hasil)) { ?>
+        <?php
+        $id = 1;
+        while ($data = mysqli_fetch_array($hasil)) { ?>
         <tr>
-            <th scope="row"><?php echo $data['id_buku']; ?></th>
+            <th scope="row"><?php echo $id++ ?></th>
             <td><?php echo $data['kode_buku']; ?></td> <!-- Tambahan -->
             <td><?php echo $data['judul_buku']; ?></td>
             <td><?php echo $data['pengarang']; ?></td>
