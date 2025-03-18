@@ -24,8 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data = mysqli_fetch_array($result);
     $newNumber = ($data) ? (int)substr($data['kode_buku'], -3) + 1 : 1;
 
-    // Format kode buku baru (BK2025001, BK2025002, dst.)
-    $kode_buku = "BK" . date("Y") . str_pad($newNumber, 3, "0", STR_PAD_LEFT);
+    // Format kode buku baru (KPB0001, KPB0002, dst.)
+    $kode_buku = "KPB"  . str_pad($newNumber, 4, "0", STR_PAD_LEFT);
 
     // Simpan data ke database
     $query = "INSERT INTO tb_buku (kode_buku, judul_buku, pengarang, tahun_terbit, kategori) 

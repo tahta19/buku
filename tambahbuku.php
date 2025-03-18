@@ -20,7 +20,7 @@ if ($data) {
 }
 
 // Buat format kode buku baru (contoh: BK2025001)
-$kode_buku = "BK" . date("Y") . str_pad($newNumber, 3, "0", STR_PAD_LEFT);
+$kode_buku = "KPB"  . str_pad($newNumber, 4, "0", STR_PAD_LEFT);
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ $kode_buku = "BK" . date("Y") . str_pad($newNumber, 3, "0", STR_PAD_LEFT);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Tambah Buku</title>
-    <!-- Bootstrap CSS -->
+<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 
@@ -61,7 +61,7 @@ $kode_buku = "BK" . date("Y") . str_pad($newNumber, 3, "0", STR_PAD_LEFT);
                 <label for="kategori">Kategori</label>
                 <input type="text" name="kategori" class="form-control" placeholder="Kategori" required>
             </div>
-            <button type="submit" class="btn btn-primary">Kirim</button>
+            <button type="submit" class="btn btn-success">Kirim</button>
             <a href="index.php" class="btn btn-secondary">Kembali</a>
         </form>
     </div>

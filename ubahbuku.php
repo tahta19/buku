@@ -54,7 +54,7 @@ $data = mysqli_fetch_assoc($hasil);
                 <input type="text" name="kategori" class="form-control" value="<?php echo $data['kategori']; ?>" required>
             </div>
             
-            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+            <button type="submit" class="btn btn-success">Simpan Perubahan</button>
             <a href="index.php" class="btn btn-secondary">Kembali</a>
         </form>
     </div>
